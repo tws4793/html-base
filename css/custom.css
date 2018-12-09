@@ -1,4 +1,4 @@
-/* Custom page CSS
+/* Main custom CSS
 -------------------------------------------------- */
 body > .container-fluid {
   padding: 20px 15px 0;
@@ -31,4 +31,15 @@ body {
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
   background-color: #f5f5f5;
+}
+
+/* Write your own styles below
+-------------------------------------------------- */
+.red {
+  /* 
+    You can use a colour picker like this one at 
+    https://www.w3schools.com/colors/colors_picker.asp
+    to help you select your colours.
+   */
+  color: red;
 }

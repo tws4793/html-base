@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- This contains the properties of the page and is not shown to you other than the 'title' -->
+
+    <!-- Meta Info -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Your Title Here</title> <!-- Put your name...or the name of your project here -->
+</head>
+
+<body>
+    <!-- This is where you write what you want people to see -->
+
+    <!-- Content -->
+    <main class="container-fluid" role="main">
+        <!-- HEADERS -->
+        <!-- Headers define the title of the section -->
+        <!-- There are only 6 levels - h1 to h6 -->
+        <h1>h1 Heading 1</h1>
+        <h2>h2 Heading 2</h2>
+        <h3>h3 Heading 3</h3>
+        <h4>h4 Heading 4</h4>
+        <h5>h5 Heading 5</h5>
+        <h6>h6 Heading 6</h6>
+
+        <!-- PARAGRAPHS -->
+        <!-- Paragraphs are like the paragraphs you write in a compo -->
+        <p>This is a paragraph</p>
+
+        <!-- FORMATTING -->
+        <!-- You may use these to format your text -->
+        <p><b>This text is bold.</b> <i>This text is italic.</i> <u>This text is underline.</u></p>
+        <p><small>This text is small.</small></p>
+
+        <!-- ...or add an attribute to create your own style -->
+        <p><span style="color:blue">This is a blue text</span></p>
+        <p><b style="font-family:'Times New Roman', Times, serif">This is a bold text in Times New Roman</b></p>
+
+        <!-- COMMENTS -->
+        <!-- Use comments like these for writing comments about a tag or hiding an element you don't want to see -->
+        <!-- <p>Uncomment to display the text</p> -->
+
+        <!-- ANCHORS -->
+        <!-- Anchors link you to another page -->
+        <p><a href="index.html">Home Page</a></p>
+        <p><a href="https://bendemeersec.moe.edu.sg/" target="_blank">School Website</a></p>
+        <!-- Add a 'target' attribute for opening in a new tab -->
+
+        <!-- IMAGES -->
+        <!-- Images display things like photographs or drawings -->
+        <p><img src="https://www.catster.com/wp-content/uploads/2018/07/Savannah-cat-long-body-shot.jpg" alt="cat" /></p>
+
+        <!-- TABLES -->
+        <!-- Tables...obviously display tables -->
+        <!-- You can use it to create  -->
+        <table class="table">
+            <!-- Comment this line if using other kinds of tables -->
+            <!-- <table class="table table-striped"> -->
+            <!-- Uncomment this line if using a striped table -->
+            <!-- <table class="table table-bordered"> -->
+            <!-- Uncomment this line if using a bordered table -->
+            <!-- <table class="table table-hover"> -->
+            <!-- Uncomment this line if you want to have a hover effect on table -->
+            <thead>
+                <!-- This thead defines a header -->
+                <tr>
+                    <!-- tr defines a row -->
+                    <th>Firstname</th> <!-- th defines a header column -->
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 'tbody' is where you put your contents of the table -->
+                <tr>
+                    <!-- 'tr' defines a row -->
+                    <td>John</td> <!-- 'td' defines a data column -->
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <!-- 'tr' defines a row -->
+                    <td>Mary</td> <!-- 'td' defines a data column -->
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <!-- 'tr' defines a row -->
+                    <td colspan="2">July</td> <!-- Use 'colspan' if you want to merge across two columns -->
+                    <td>july@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- We recommend you the same number of 'th' and 'td' tags per 'tr' -->
+
+        <!-- LISTS -->
+
+        <!-- You can use an unordered list (e.g. bullet points) -->
+        <ul>
+            <!-- Unordered list usually starts with a 'ul' -->
+            <li>Coffee</li> <!-- Each list have several 'li' items -->
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <!-- ...or an ordered list (e.g. 1,2,3 or a,b,c) -->
+        <ol>
+            <!-- Ordered list usually starts with a 'li' -->
+            <li>Coffee</li> <!-- Each list have several 'li' items -->
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+        <!-- Use CSS if you want to customise how the bullets display in an ordered list. -->
+
+        <!-- BLOCKS -->
+        <div>This defines one block</div>
+
+        <!-- CLASSES -->
+        <!-- Classes define styles for elements -->
+        <!-- Add 'class="classname"' as an attribute inside the element -->
+        <!-- There can be multiple classes in a single html file -->
+        <div class="classname">This is a block with a class of 'classname'</div>
+
+        <!-- ID -->
+        <!-- IDs define a unique identifier for the element -->
+        <!-- You will realise its importance when you use it with CSS -->
+        <!-- Add 'id="uniqueid"' as an attribute inside the element -->
+        <!-- Each ID is unique and should be used once in a single html file -->
+        <div id="id1">This is a block with an id of 'id1'</div>
+        <p id="id2">This is a paragaph with an id of 'id2'</p>
+
+        <!-- SCRIPT -->
+        <!-- For you to write Javascript inside a script block -->
+        <!-- Usually we put it right at the bottom of the page to make the page load faster -->
+        <!-- We will cover more in the Javascript lesson -->
+        <script>
+            document.getElementById("id2").style.color = "red";
+
+            $(document).ready(function () {
+                $(".close").click(function () {
+                    $("#good").alert("close");
+                    $("#bad").alert("close");
+                });
+            });
+        </script>
+
+        <hr />
+        <!-- FORMS -->
+        <!-- Forms is for getting user input (e.g. survey form) -->
+        <form action="">
+            <!-- All forms have an action attribute asking the page where the data should be processed after submitting -->
+            <!-- Add 'class="form-inline"' into the above form element if you want all the form elements below to be on the same line-->
+
+            <!-- Any form elements must usually be encased in the 'form' element -->
+
+            <!-- LABEL, INPUT -->
+            <div class="form-group">
+                <!-- In Bootstrap, each field is in a block with class of 'form-group' -->
+                <label for="surname">Surname</label> <!-- Label -->
+                <input type="text" class="form-control" id="surname">
+                <!-- Displays a text box for the user to enter information -->
+            </div>
+            <div class="form-group">
+                <!-- In Bootstrap, each field is in a block with class of 'form-group' -->
+                <label for="givenname">Given Name</label>
+                <input type="text" class="form-control" id="givenname">
+                <!-- Displays a text box for the user to enter information -->
+            </div>
+            <div class="form-group">
+                <!--  -->
+                <!-- In Bootstrap, each field is in a block with class of 'form-group' -->
+                <label for="age">Age</label>
+                <!-- Add 'form-control-sm' or 'form-control-lg' class to control the size of the textbox -->
+                <input type="text" class="form-control form-control-lg" id="age">
+                <!-- Displays a text box for the user to enter information -->
+            </div>
+
+            <!-- INPUT: RADIO -->
+            <!-- Use radio buttons for selecting one and only one option (like your MCQ) -->
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="form-check">
+                    <!-- Each option is within a 'form-check' block -->
+                    <label class="form-check-label">
+                        <!-- Note that 'label' here is written differently! -->
+                        <input type="radio" class="form-check-input" name="gender" value="m"> Male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <!-- Each option is within a 'form-check' block -->
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="gender" value="f"> Female
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Level</label>
+                <!-- If you want the options to be within the same line, you can change the 'form-check' to 'form-check-inline' -->
+                <div class="form-check-inline">
+                    <!-- Each option is within a 'form-check-inline' block -->
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="level" value="1"> Sec 1
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <!-- Each option is within a 'form-check-inline' block -->
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="level" value="2"> Sec 2
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <!-- Each option is within a 'form-check-inline' block -->
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="level" value="3"> Sec 3
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <!-- Each option is within a 'form-check-inline' block -->
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="level" value="4"> Sec 4/5
+                    </label>
+                </div>
+            </div>
+
+            <!-- INPUT: CHECKBOX -->
+            <!-- Use checkboxes for selecting more than one option -->
+            <div class="form-group">
+                <label>Subjects</label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="subjects" value="e"> English
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="subjects" value="m"> Maths
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="subjects" value="s"> Science
+                    </label>
+                </div>
+            </div>
+
+            <!-- SELECT -->
+            <!-- Same function as checkboxes, but in the form of a dropdown menu -->
+            <div class="form-group">
+                <label for="sel1">Grade</label>
+                <select class="form-control" id="grade">
+                    <option value="a">A</option> <!-- Define the option of 'A' -->
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
+                </select>
+            </div>
+
+            <!-- INPUT: TEXTAREA -->
+            <!-- Use textarea for writing multiple lines of comment -->
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <!-- 'rows' attribute determines number of lines for the box -->
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+
+            <!-- BUTTON -->
+            <!-- For interacting the form with your backend -->
+            <!-- e.g. Submitting the form -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="form-group">
+                <!-- For Bootstrap, you can define the colour of the button -->
+                <button type="button" class="btn">Basic</button>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-link">Link</button>
+            </div>
+        </form>
+
+        <hr />
+        <!-- BOOTSTRAP GRID SYSTEM -->
+        <!-- Bootstrap provides up to 12 standard columns -->
+        <!-- Use in the form <div class="col-n">Content</div> -->
+        <!-- where n is a number -->
+        <div class="row">
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+            <div class="col-1">Span 1</div>
+        </div>
+
+        <!-- You can also define just 3 columns -->
+        <!-- Make sure to change n to 4 (12 / 3 = 4) -->
+        <div class="row">
+            <div class="col-4">Span 4</div>
+            <div class="col-4">Span 4</div>
+            <div class="col-4">Span 4</div>
+        </div>
+
+        <!-- Or you can create two columns of -->
+        <!-- size 4 to the left and size 8 to the right -->
+        <div class="row">
+            <div class="col-4">Span 4</div>
+            <div class="col-8">Span 8</div>
+        </div>
+
+        <!-- Or just define one column of size 12 -->
+        <div class="row">
+            <div class="col-12">Span 12</div>
+        </div>
+        <!-- Make sure that the column sizes all add up to 12! -->
+
+        <!-- Or you can let Bootstrap do the work for you -->
+        <div class="row">
+            <div class="col">Col 1</div>
+            <div class="col">Col 2</div>
+            <div class="col">Col 3</div>
+            <div class="col">Col 4</div>
+            <div class="col">Col 5</div>
+        </div>
+
+        <hr />
+        <!-- BOOTSTRAP COLORS -->
+        <!-- You may use these classes if you want to add colour to your text -->
+        <p class="text-muted">This text is muted.</p>
+        <p class="text-primary">This text is important.</p>
+        <p class="text-success">This text indicates success.</p>
+        <p class="text-info">This text represents some information.</p>
+        <p class="text-warning">This text represents a warning.</p>
+        <p class="text-danger">This text represents danger.</p>
+        <p class="text-secondary">Secondary text.</p>
+        <p class="text-dark">This text is dark grey.</p>
+        <p class="text-body">Default body color (often black).</p>
+        <p class="text-light">This text is light grey (on white background).</p>
+        <p class="text-white">This text is white (on white background).</p>
+
+        <!-- Alternatively you can give your background some colours -->
+        <p class="bg-primary text-white">This text is important.</p>
+        <p class="bg-success text-white">This text indicates success.</p>
+        <p class="bg-info text-white">This text represents some information.</p>
+        <p class="bg-warning text-white">This text represents a warning.</p>
+        <p class="bg-danger text-white">This text represents danger.</p>
+        <p class="bg-secondary text-white">Secondary background color.</p>
+        <p class="bg-dark text-white">Dark grey background color.</p>
+        <p class="bg-light text-dark">Light grey background color.</p>
+
+        <!-- Bootstrap colours are also applicable to other types of elements, such as alerts. -->
+
+        <hr />
+        <!-- BOOTSTRAP ALERT -->
+        <!-- An alert is an example of a Bootstrap component you can include in your page -->
+        <div class="alert alert-success alert-dismissible" id="good">
+            <button type="button" class="close">&times;</button>
+            <b>Success!</b> This is a success message
+        </div>
+        <!-- By now you should notice that you can change the text 'success' to something like 'danger': -->
+        <div class="alert alert-danger alert-dismissible" id="bad">
+            <button type="button" class="close">&times;</button>
+            <b>Failed!</b> This is a danger message
+        </div>
+        <!-- Or any other defined Bootstrap colours -->
+
+        <hr />
+        <!-- RESOURCES -->
+        <div>
+            <p>For more examples of Bootstrap components you can add, check out the following websites:</p>
+            <ul>
+                <li><a href="https://getbootstrap.com/">https://getbootstrap.com/</a></li>
+                <li><a href="https://www.w3schools.com/bootstrap4/">https://www.w3schools.com/bootstrap4/</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
