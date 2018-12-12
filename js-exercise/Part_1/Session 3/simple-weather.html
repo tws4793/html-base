@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+
+        //When it detects the button with the id 'weatherLocation', it will load its code logic
+        $('#weatherLocation').click(function() {
+          let city = $('#location').val();
+          $('#location').val("");
+          $.ajax({
+
+            //This is an API link: Like where you get an online resource.
+            url: `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f8902851e74fc975f746a7cfae3f7697`,
+            type: 'GET', //The method to get this resource
+            data: {
+              format: 'json' //The format of the data given by the online resource
+            },
+            success: function(response) {
+              let celsius = (response.main.temp - 273.15).toFixed(2);
+              $('.showHumidity').text(`The humidity in ${city} is ${response.main.humidity}%`);
+              $('.showTemp').text(`The temperature in Celsius is ${celsius}.`);
+              $('.showWind').text(`The wind speed in KM/H is ${response.wind.speed}.`);
+            },
+            error: function() {
+              $('#errors').text("There was an error processing your request. Please try again.");
+            }
+          });
+        });
+      });
+    </script>
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Get Weather Conditions From Anywhere!</h1>
+      <label for="location">Enter a location:</label>
+      
+
+      <!-- This is where the jQuery will read the input value.
+            it reads whatever value it has in this text input called 'location' -->
+      <input id="location" type="text">
+      
+
+      <!-- jQuery logic will be activated when the button is pressed -->
+      <button class="btn-success" id="weatherLocation">Get Current Humidity!</button>
+      <div class="errors"></div>
+      <div class="showHumidity"></div>
+      <div class="showTemp"></div>
+      <div class="showWind"></div>
+    </div>
+  </body>
+</html>
